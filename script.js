@@ -1,7 +1,7 @@
 fetch("tasks.json")
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+        console.log(data.tasks[0])
     })
 
 document.getElementById('add-task-btn').onclick = function(){
