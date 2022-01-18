@@ -19,14 +19,11 @@ document.getElementById('add-task-btn').onclick = function(){
         alert('Please enter new task');
     }
     else{
-        document.querySelector('#tasks').innerHTML
-        += `
-            <div class="task">
-                <span id="taskname">
-                    ${document.querySelector('#new-task input').value}
-                </span>
-                <button class="delete-task">Delete</button>
-            </div>
-        `;
+        fetch("tasks.json")
+            .then(response => response.json())
+            .then(data => {
+                data.tasks.push(document.querySelector('#new-task input').value)
+                console.log(data.tasks)
+    })
     }
 }
