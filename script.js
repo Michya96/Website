@@ -19,17 +19,15 @@ document.getElementById('add-task-btn').onclick = function(){
         alert('Please enter new task');
     }
     else{
-        fetch("tasks.json")
-            .then(response => response.json())
-            .then(data => {
-                data.tasks.push(document.querySelector('#new-task input').value);
-                console.log(data.tasks);
-                var fs = require('fs');
-                fs.writeFile ("input.json", JSON.stringify(data), function(err) {
-                    if (err) throw err;
-                    console.log('complete');
-                    }
-                );
-    })
+        // fetch("tasks.json")
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         data.tasks.push(document.querySelector('#new-task input').value);
+        //         console.log(data.tasks);
+        //         fs.writeFile ("input.json", JSON.stringify(data), function(err) {
+        //             if (err) throw err;
+        //             console.log('complete');
+        //             }
+        //         );})
     }
 }
