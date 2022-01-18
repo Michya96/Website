@@ -22,8 +22,10 @@ document.getElementById('add-task-btn').onclick = function(){
         fetch("tasks.json")
             .then(response => response.json())
             .then(data => {
-                data.tasks.push(document.querySelector('#new-task input').value)
-                console.log(data.tasks)
+                data.tasks.push(document.querySelector('#new-task input').value);
+                console.log(data.tasks);
+                json = JSON.stringify(data);
+                FileSystem.writeFile('myjson.json', json, 'utf8', callback);
     })
     }
 }
