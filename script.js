@@ -6,7 +6,7 @@ fetch("tasks.json")
             += `
                 <div class="task">
                     <span id="taskname">
-                        ${data[task]}
+                        ${data.tasks[task]}
                     </span>
                     <button class="delete-task">Delete</button>
                 </div>
