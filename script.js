@@ -1,7 +1,17 @@
 fetch("tasks.json")
     .then(response => response.json())
     .then(data => {
-        console.log(data.tasks[0])
+        for(task in data.tasks){
+            document.querySelector('#tasks').innerHTML
+            += `
+                <div class="task">
+                    <span id="taskname">
+                        task
+                    </span>
+                    <button class="delete-task">Delete</button>
+                </div>
+            `; 
+        }
     })
 
 document.getElementById('add-task-btn').onclick = function(){
