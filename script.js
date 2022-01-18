@@ -24,8 +24,12 @@ document.getElementById('add-task-btn').onclick = function(){
             .then(data => {
                 data.tasks.push(document.querySelector('#new-task input').value);
                 console.log(data.tasks);
-                json = JSON.stringify(data);
-                FileSystem.writeFile('myjson.json', json, 'utf8', callback);
+                var fs = require('fs');
+                fs.writeFile ("input.json", JSON.stringify(data), function(err) {
+                    if (err) throw err;
+                    console.log('complete');
+                    }
+                );
     })
     }
 }
