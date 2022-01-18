@@ -5,18 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    
     <title>To-do list</title>
 </head>
 <body>
     <div class="grid">
-        <ul>
-            <li>Do dishes</li>
-            <li>Wake up</li>
-            <li>Go to school</li>
-            <li>Reconsider living</li>
-            <li>Play computer games</li>
-        </ul>
+        <h1 id="title">To-do list</h1>
+
+        <div id="new-task">
+            <input type="text" placeholder="Task name">
+            <button id="add-task-btn">Add task</button>
+        </div>
+        <div id="tasks">
+
+        </div>
     </div>
+    <script type="text/javascript" src="tasks.json"></script>
+    <script src="script.js"></script>
 </body>
 </html>
